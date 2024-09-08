@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cajero Automático</title>
-    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-    <div class="container">
+    <main>
         <h1>Cajero Automático</h1>
-        <div id="login">
-            <label for="account">Selecciona tu cuenta:</label>
-            <select id="account">
-                <option value="0">Mali</option>
-                <option value="1">Gera</option>
-                <option value="2">Maui</option>
+        <section class="form-selection">
+            <form>
+
+            <label for="cuentas">Selecciona tu cuenta:</label>
+            <select id="cuentas" name="cuentas"aria-label="selecciona tu cuenta">
+                <option value="Mali">Mali</option>
+                <option value="Gera">Gera</option>
+                <option value="Maui">Maui</option>
             </select>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password">
-            <button onclick="login()">Ingresar</button>
-            <p id="error" class="error"></p>
-        </div>
-        
-        <div id="operations" style="display: none;">
-            <h2>Bienvenido, <span id="user-name"></span></h2>
-            <button onclick="checkBalance()">Consultar Saldo</button>
-            <button onclick="deposit()">Ingresar Monto</button>
-            <button onclick="withdraw()">Retirar Monto</button>
-            <button onclick="logout()">Salir</button>
-            <p id="message"></p>
-        </div>
-    </div>
+            
+            <label for="password">Ingresa tu contraseña:</label>
+            <input type="password" id="password" name="password"aria-label="Ingresa tu contraseña">
+          
+        <button type="button"class="btn btn-outline-primary"onclick="iniciarTransaccion()">Acceder</button>
+ </form>
+        </section
+
+        <section class="result-section" id="resultado">
+
+</section>
+    </main>
+    
     <script src="script.js"></script>
 </body>
 </html>

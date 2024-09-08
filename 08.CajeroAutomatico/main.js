@@ -15,10 +15,10 @@ const cuentas = [
         selectCuentas.appendChild(option);
     });
 
-    function iniciarTransicion(){
-        const cuentaSeleccionada = cuentas.find (cuenta=> cuenta.nombre === selectCuentas.value);
-        const passwordIngresado =inputPassword.value;
-        
+    function iniciarTransicion() {
+        const cuentaSeleccionada = cuentas.find (cuenta => cuenta.nombre === selectCuentas.value);
+        const passwordIngresado = inputPassword.value;
+    }
 
         if (cuentaSeleccionada.password === passwordIngresado) {
             mostrarOpciones (cuentaSeleccionada);
@@ -26,7 +26,7 @@ const cuentas = [
             resultado.textContent = "Contraseña incorrecta. Intenta nuevamente";
         }
     
-    function mostrarOpciones(cuenta){
+    function mostrarOpciones(cuenta) {
         const opciones = ["1) Consulta saldo", "2) Ingresar monto", "3) Retirar monto"];
         const seleccion = prompt("Seleccionar una opçión:\n" + opciones.join("\n")).toLowerCase();
 
